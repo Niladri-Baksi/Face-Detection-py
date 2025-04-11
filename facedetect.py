@@ -13,6 +13,8 @@ import cv2 #imports cv2
 
 face_cap=cv2.CascadeClassifier("C:/Users/nilad/AppData/Local/Programs/Python/Python313/Lib/site-packages/cv2/data/haarcascade_frontalface_default.xml")
 video_cap=cv2.VideoCapture(0) #enables the camera in runtime
+address="https://192.168.0.101:8080/video"
+video_cap.open(address)
 
 while True: #keeps camera on until a certain key is pressed
     ret,video_data=video_cap.read() #reads video
